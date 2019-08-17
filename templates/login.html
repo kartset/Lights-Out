@@ -5,16 +5,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   </head>
 <body>
-  <div class="container ">
-    <br>
-    <div class="col-sm-4">
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button class="btn btn-default" type="submit">Sign-In</button>
-    </form>
+  <div id="container" class="container">
+    <div class="row">
+      <div class="col-sm-12 offset-sm-2 text-center">
+        <h1 class="display-3">Welcome to Lights Out</h1>
+        <br><br><br>
+        <h3 class="display-3">Please Sign-In</h3>
+        <br><br><br>
+        <br><br><br>
+        <div class="info-form">
+          <form method="post" class="form-inline justify-content-center">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success active" type="submit">Sign-In</button>
+          </form>
+        </div>
+      </div>
+      <br>
     </div>
   </div>
-
 </body>
 </html>

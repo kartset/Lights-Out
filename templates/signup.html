@@ -1,12 +1,28 @@
-{% extends 'base.html' %}
-
-{% block title %}Sign Up{% endblock %}
-
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+<body>
+  <div id="container" class="container">
+    <div class="row">
+      <div class="col-sm-12 offset-sm-2 text-center">
+        <h1 class="display-3">Welcome to Lights Out</h1>
+        <br><br><br>
+        <h3 class="display-3">Please Register</h3>
+        <br><br><br>
+        <br><br><br>
+        <div class="info-form">
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success active" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</body>
+</html>
